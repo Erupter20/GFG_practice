@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Units task</title>
+  </head>
+  <style>
+    .box {
+      width: 1200px;
+      height: 800px;
+    }
+    #div-1 {
+      width: 1200px;
+      height: 800px;
+      background-color: red;
+    }
+    #div-2 {
+      width: 600px;
+      height: 400px;
+      background-color: green;
+    }
+    #div-3 {
+      width: 180px;
+      height: 120px;
+      background-color: blue;
+    }
+    #div-4 {
+      width: 144px;
+      height: 96px;
+      background-color: yellow;
+    }
+  </style>
+  <body>
+    <div class="box" id="div-1">
+      <p>div-1</p>
+      <div class="box" id="div-2">
+        <p>div-2</p>
+        <div class="box" id="div-3">
+          <p>div-3</p>
+          <div class="box" id="div-4">
+            <p>div-4</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
