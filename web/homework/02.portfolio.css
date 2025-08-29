@@ -1,10 +1,12 @@
 *{
+    margin: 0;
+    padding: 0;
     background-color: black;
     color:white;
 }
 
 #paragraph{
-    color:cyan;
+    color:white;
 }
 .h-2{
     color:yellow;
