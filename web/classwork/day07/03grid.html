@@ -5,63 +5,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Grid</title>
     <style>
-        
+      * {
+        padding: 0;
+        margin: 3px;
+        color: black;
+        background-color: black;
+      }
       .container {
         width: 800px;
         height: 500px;
         background-color: beige;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(4, 1fr);
+        padding: 10px;
         gap: 10px;
-        /* align-content: flex-end;
-        justify-content: flex-end; */
+        display: grid;
+        grid-template-areas: 
+        "one one two two"
+        "one one three four"
+        "five five six six"
+        "five five seven eight"
+        ;
+
       }
       .child {
-        /* width: 100px;
-            height: 100px; */
-        background-color: red;
         display: flex;
         align-items: center;
         justify-content: center;
+        background-color: red;
       }
-      .child-1{
-        background-color: green;
-        grid-column-start: 1;
-        grid-column-end: 4;
-    }
-      .child-2{
-        background-color: blue;
-        grid-row-start: 2;
-        grid-row-end: 4;
+      .child-1 {
+        background-color: red;
+        grid-area: one;
       }
-      .child-3{
-        background-color: yellow;
-        grid-column-start: 2;
-        grid-column-end: 4;
+      .child-2 {
+        background-color: red;
+        grid-area: two;
       }
-      .child-4{
-        background-color: aqua;
+      .child-3 {
+        background-color: red;
       }
-      .child-5{
-        background-color: orange;
+      .child-4 {
+        background-color: red;
       }
-      .child-6{
-        background-color: brown;
-        grid-column-start: 1;
-        grid-column-end: 4;
+      .child-5 {
+        background-color: cadetblue;
+        grid-area: five;
+      }
+      .child-6 {
+        background-color: cadetblue;
+        grid-area: six;
+      }
+      .child-7{
+        background-color:cadetblue;
+      }
+      .child-8{
+        background-color:cadetblue;
       }
     </style>
   </head>
 
   <body>
     <div class="container">
-      <div class="child child-1">Header</div>
-      <div class="child child-2">sidebar</div>
-      <div class="child child-3">content-1</div>
-      <div class="child child-4">content-2</div>
-      <div class="child child-5">content-3</div>
-      <div class="child child-6">footer</div>
+      <div class="child child-1">1</div>
+      <div class="child child-2">2</div>
+      <div class="child child-3">3</div>
+      <div class="child child-4">4</div>
+      <div class="child child-5">1</div>
+      <div class="child child-6">2</div>
+      <div class="child child-7">3</div>
+      <div class="child child-8">4</div>
     </div>
   </body>
 </html>
