@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        width: 800px;
+        height: 600px;
+        background-color: antiquewhite;
+        display: flex;
+        flex-direction: row; /*same properties for column as well */
+        justify-content: center;
+        align-items: center;
+        /* justify-content: space-evenly; 
+            justify-content: space-around;
+            justify-content: space-between;
+            justify-content: flex-start;
+            justify-content: flex-end;
+            justify-content: center; 
+            align-items: center;
+            align-items: flex-start;
+            align-items: flex-end; 
+            align-items: stretch 
+            flex-wrap: wrap;
+            flex-wrap: wrap-reverse;*/
+      }
+      .child {
+        width: 100px;
+        height: 100px;
+        margin: 5px;
+    }
+    .child-1 {
+          flex-grow: 2;
+          background-color: red;
+        }
+        .child-2 {
+          flex-shrink: 2;
+          order: 1;
+        background-color: green;
+      }
+      .child-3 {
+        background-color: blue;
+        flex-basis: 200px;
+      }
+      .child-4 {
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="child child-1">child-1</div>
+      <div class="child child-2">child-2</div>
+      <div class="child child-3">child-3</div>
+      <div class="child child-4">child-4</div>
+    </div>
+  </body>
+</html>
