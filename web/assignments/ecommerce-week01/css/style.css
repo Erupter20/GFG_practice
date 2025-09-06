@@ -122,6 +122,12 @@ body {
 .product-card:hover {
   color: var(--detail-color);
 }
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: var(--surface);
+  color: var(--text-primary);
+}
 @media (max-width: 720px) {
   .hero {
     grid-template-columns: 1fr;
