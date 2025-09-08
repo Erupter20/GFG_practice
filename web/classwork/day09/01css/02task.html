@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hover button</title>
+    <style>
+      * {
+        background-color: brown;
+      }
+      .btn {
+          padding: 10px 20px;
+        }
+        .text {
+            background-color:yellow;
+        }
+      .btn:hover {
+        padding: 20px 40px;
+        cursor: pointer;
+        animation: hover 1s linear infinite;
+        cursor: pointer;
+    }
+    .text:hover{
+        background-color: green;
+        cursor: pointer;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="btn">
+        <button class="text">Submit</button>
+      </div>
+    </div>
+  </body>
+</html>
