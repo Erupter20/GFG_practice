@@ -1,0 +1,26 @@
+/* theme color (use only for occasional background or badges) */
+.bg-jungle {
+  background-color: #2e5339 !important;
+}
+.text-fossil {
+  color: #555 !important;
+}
+.hero-section {
+  background: url("../assets/site-banner.jpg") center/cover no-repeat;
+  min-height: 100vh;
+  position: relative;
+}
+.hero-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 0;
+}
+.hero-section .container {
+  position: relative;
+  z-index: 1;
+}
+.btn-success {
+  font-weight: 600;
+}
