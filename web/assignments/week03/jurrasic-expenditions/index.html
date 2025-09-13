@@ -2,6 +2,8 @@
 <html lang="en">
   <head>
     <title>Jurassic Expedition Tours</title>
+    <meta name="description" />
+    <meta name="theme-color" />
     <meta charset="utf-8" />
     <meta
       name="viewport"
@@ -14,47 +16,67 @@
     <link rel="stylesheet" href="../jurrasic-expenditions/css/style.css" />
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" role="navigation">
-      <div class="container">
-        <a href="#" class="navbar-brand text-white">Jurassic Tours</a>
+    <main>
+      <nav
+        class="navbar navbar-expand-lg navbar-dark bg-dark position-relative" 
+        role="navigation"
+      >
+        <div class="container">
+          <a href="#" class="navbar-brand text-white">Jurassic Tours</a>
 
-        <!-- hamburger button -->
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
+          <!-- hamburger button -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link text-white active" aria-current="page" href="#"
-                >Home</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-white" href="#">Packages</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-white" href="#">Gallery</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-white" href="#">Booking</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-white" href="#">Contact</a>
-            </li>
-          </ul>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Packages</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Gallery</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Booking</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="hero position-relative min-vh-100 container-fluid">
+        <video
+          video
+          autoplay
+          muted
+          loop
+          playsinline
+          class="position-absolute h-100 w-100 z-n1 object-fit-cover embed-responsive-item top-0 start-0"
+          src="../jurrasic-expenditions/assets/JWE-Open-Gates-Web.webm"
+        ></video>
+        <div class="img d-flex justify-content-center align-items-center">
+          <img
+            class="img-fluid align-center ms d-block position-relative z-2 w-25"
+            src="../jurrasic-expenditions/assets/JWE-Main-Logo.webp"
+            alt="Jurrasic Expenditions site banner with dinosaur picture"
+          />
         </div>
       </div>
-    </nav>
-    <main></main>
+    </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   </body>
