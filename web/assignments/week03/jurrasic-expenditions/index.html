@@ -18,11 +18,16 @@
   <body>
     <main>
       <nav
-        class="navbar navbar-expand-lg navbar-dark bg-dark position-relative" 
+        class="navbar navbar-expand-lg navbar-dark bg-transparent position-absolute w-100 z-3"
         role="navigation"
       >
-        <div class="container">
-          <a href="#" class="navbar-brand text-white">Jurassic Tours</a>
+        <div class="container-fluid p-0">
+          <img
+            class="img-fluid starting-logo dark-version skip-lazy w-25 d-block me-auto"
+            alt="Jurassic World:The Experience "
+            src="../jurrasic-expenditions/assets/JWE-navbar-Logo.webp"
+          />
+          <a href="#" class="navbar-brand text-white"></a>
 
           <!-- hamburger button -->
           <button
@@ -58,22 +63,144 @@
           </div>
         </div>
       </nav>
-      <div class="hero position-relative min-vh-100 container-fluid">
+
+      <div class="position-relative min-vh-100">
         <video
-          video
           autoplay
           muted
           loop
           playsinline
-          class="position-absolute h-100 w-100 z-n1 object-fit-cover embed-responsive-item top-0 start-0"
+          preload="metadata"
+          poster="assets/hero-poster.jpg"
+          class="position-absolute top-0 start-0 w-100 h-100 z-0 object-fit-cover"
           src="../jurrasic-expenditions/assets/JWE-Open-Gates-Web.webm"
         ></video>
-        <div class="img d-flex justify-content-center align-items-center">
+
+        <div
+          class="position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-50 z-1"
+        ></div>
+
+        <div
+          class="position-relative z-2 d-flex flex-column justify-content-center align-items-center text-center min-vh-100"
+        >
           <img
-            class="img-fluid align-center ms d-block position-relative z-2 w-25"
+            class="img-fluid w-604 h-556 mx-auto"
             src="../jurrasic-expenditions/assets/JWE-Main-Logo.webp"
-            alt="Jurrasic Expenditions site banner with dinosaur picture"
+            alt="Jurassic Expeditions logo"
           />
+        </div>
+      </div>
+
+      <!--CARDS-->
+      <div class="container-fluid row g-0">
+        <div class="col position-relative">
+          <div class="card border-0 bg-transparent h-100">
+            <div
+              id="cardCarousel1"
+              class="carousel slide"
+              data-bs-ride="carousel"
+            >
+              <div class="carousel-inner h-100">
+                <div class="carousel-item active">
+                  <img
+                    src="../jurrasic-expenditions/assets/card-1.jpg"
+                    class="card-img-top h-100 w-100 object-fit-cover"
+                    alt="Destination view 1"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="carousel-item h-100">
+                  <img
+                    src="../jurrasic-expenditions/assets/card-2.jpg"
+                    class="card-img-top h-100 w-100 object-fit-cover"
+                    alt="Destination view 2"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="carousel-item h-100">
+                  <img
+                    src="../jurrasic-expenditions/assets/card-3.jpg"
+                    class="card-img-top h-100 w-100 object-fit-cover"
+                    alt="Destination view 3"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="carousel-item h-100">
+                  <img
+                    src="../jurrasic-expenditions/assets/card-4.jpg"
+                    class="card-img-top h-100 w-100 object-fit-cover"
+                    alt="Destination view 3"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="carousel-item h-100">
+                  <img
+                    src="../jurrasic-expenditions/assets/card-5.jpg"
+                    class="card-img-top h-100 w-100 object-fit-cover"
+                    alt="Destination view 3"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="carousel-item h-100">
+                  <img
+                    src="../jurrasic-expenditions/assets/card-6.jpg"
+                    class="card-img-top h-100 w-100 object-fit-cover"
+                    alt="Destination view 3"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="carousel-item h-100">
+                  <img
+                    src="../jurrasic-expenditions/assets/card-7.jpg"
+                    class="card-img-top h-100 w-100 object-fit-cover"
+                    alt="Destination view 3"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="carousel-item h-100">
+                  <img
+                    src="../jurrasic-expenditions/assets/card-8.jpg"
+                    class="card-img-top h-100 w-100 object-fit-cover"
+                    alt="Destination view 3"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#cardCarousel1"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#cardCarousel1"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+
+            <div class="card-body">
+              <h5 class="card-title">Destination Name</h5>
+              <p class="card-text">
+                Short description about this location to entice users.
+              </p>
+              <a href="#" class="btn btn-primary">Book Now</a>
+            </div>
+          </div>
         </div>
       </div>
     </main>
