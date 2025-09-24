@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .square {
+        width: 100px;
+        height: 100px;
+      }
+      .rectangle {
+        width: 150px;
+        height: 100px;
+      }
+      .circle {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+      }
+      .container {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+        margin-top: 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <input id="shape" placeholder="square / circle /rectangle " />
+    <input id="color" type="color" value="#ff0000" />
+    <input id="quantity" type="number" placeholder="quantity" />
+    <button id="btn">Generate</button>
+
+    <div class="container"></div>
+
+    <script>
+      const btn = document.querySelector("#btn");
+      const container = document.querySelector(".container");
+
+      btn.addEventListener("click", () => {
+        container.innerHTML = ""; // clear old
+        const shapeInput = (document.querySelector("#shape").value || "")
+          .trim()
+          .toLowerCase();
+        const colorInput = document.querySelector("#color").value || "#000";
+        const quantity =
+          parseInt(document.querySelector("#quantity").value, 10) || 0;
+
+        if (!quantity || quantity <= 0) return alert("Enter a valid quantity");
+        if (!["square", "circle", "rectangle"].includes(shapeInput))
+          return alert('Type "square" or "circle"or "rectangle" ');
+
+        for (let i = 0; i < quantity; i++) {
+          const el = document.createElement("div");
+          el.classList.add(shapeInput);
+          el.style.backgroundColor = colorInput;
+          container.appendChild(el);
+        }
+      });
+    </script>
+  </body>
+</html>
