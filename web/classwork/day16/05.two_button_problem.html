@@ -8,15 +8,35 @@
   <body>
     <button id="red">Red</button>
     <button id="green">Green</button>
+    <button id="white">White</button>
     <script>
       function clickHandle(color) {
-        return function () {
-          document.body.style.backgroundColor = `${color}`;
-        };
+        document.body.style.backgroundColor = `${color}`;
       }
 
+      // document.getElementById("red").onclick = clickHandle("red");
+      // document.getElementById("green").onclick = clickHandle("green");
+
+      // before closure, wrong implementation. to solve this we need closure
+
+      // function clickHandle(color) {
+      //   document.body.style.backgroundColor = `${color}`;
+      // }
+
+      // document.getElementById("red").onclick =clickHandle("red");
+      // document.getElementById("green").onclick =clickHandle("green");
+
+      // Using Closure
+
+      function clickHandle(color) {
+        return function () {
+          document.body.style.backgroundColor = color;
+        };
+      }
+      // assigning closures as handlers
       document.getElementById("red").onclick = clickHandle("red");
       document.getElementById("green").onclick = clickHandle("green");
+      document.getElementById("white").onclick = clickHandle("white");
     </script>
   </body>
 </html>

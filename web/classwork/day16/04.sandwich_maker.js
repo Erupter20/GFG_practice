@@ -12,22 +12,22 @@ function addButter(next) {
   }, 1000);
 }
 
-function grillSandwhich(next) {
+function grillSandwich(next) {
   setTimeout(() => {
-    console.log("Grilled the Sandwhich");
+    console.log("Grilled the Sandwich");
     next();
   }, 1000);
 }
 
 function serve() {
   setTimeout(() => {
-    console.log("Sandwhich Served");
+    console.log("Sandwich Served");
   }, 1000);
 }
 
 getBread(() => {
   addButter(() => {
-    grillSandwhich(() => {
+    grillSandwich(() => {
       serve();
     });
   });

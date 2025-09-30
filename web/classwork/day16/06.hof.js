@@ -8,6 +8,7 @@
 //   console.log(Element);
 // });
 
+let salary = [100, 200, 300, 400, 500];
 let salary2 = [600, 700, 800, 900, 1000];
 
 function calculateTenPercent(num) {
@@ -25,9 +26,8 @@ Array.prototype.calculateTax = function (calculateFn) {
   }
   return res;
 };
-// let finalOutput = calculateTax(salary2, calculateTwentyPercent);
+// let finalOutput = calculateTax(salary, calculateTenPercent);
 // let finalOutput2 = calculateTax(salary2, calculateTwentyPercent);
 // console.log(finalOutput);
-let salary = [100, 200, 300, 400, 500];
 
 console.log(salary.calculateTax(calculateTwentyPercent));
