@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .para {
+        color: red;
+      }
+    </style>
+    <link rel="icon" href="data:;base64,=" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>This is targeted by its tag name</h1>
+      <h1>This is targeted by its tag name again</h1>
+      <h1>This is targeted by its tag name again</h1>
+      <h1 class="heading-1">This is targeted by its class name</h1>
+      <h1 class="heading-1">This is targeted by its class name again</h1>
+      <h2 id="heading-1">This is targeted by its id</h2>
+      <h3 class="heading-id">This is targeted by its class</h3>
+      <h3 class="heading-id">This is targeted again by its class</h3>
+    </div>
+    <script>
+      //DOM manipulation
+
+      // using tag name
+
+      //   const result = document.getElementsByTagName("h1");
+      //   console.log(result[0]);
+
+      // Using ID
+
+      const result2 = document.getElementById("heading-1");
+      console.log(result2);
+
+      // Using classname
+      const result3 = document.getElementsByClassName("heading-id");
+      console.log(result3); // returns a collection
+
+      //using querySelector
+
+      // const result4 = document.querySelector(".heading-1"); //returns only the first one
+
+      // const result5 = document.querySelectorAll(".heading-1");
+      // console.log(result3);
+
+      // Creating elements on own
+
+      // const para = document.createElement("p");
+      // para.innerText = "this is added by JS";
+      // document.body.appendChild(para);
+
+      // para.classList.add("para");
+      // document.body.appendChild(para);
+
+      const container = document.querySelector(".container");
+
+      //child nodes
+      console.log(container.childNodes);
+
+      const heading = document.querySelector(".heading-1");
+      console.log(heading.parentNode);
+    </script>
+  </body>
+</html>

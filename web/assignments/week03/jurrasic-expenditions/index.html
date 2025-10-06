@@ -2,812 +2,331 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Jurassic Expedition Tours</title>
     <meta
       name="description"
-      content="Book immersive Jurassic-themed expedition tours. Packages, gallery, contact and secure booking."
+      content="Book immersive Jurassic-themed expedition tours. Packages, gallery, contact."
     />
-    <meta name="theme-color" content="#0b1a2b" />
-
-    <!-- Bootstrap CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
 
     <style>
-      /* Small custom tweaks */
       :root {
         --hero-overlay: rgba(3, 11, 16, 0.55);
-        --brand-color: #0d6efd;
+        --brand: #0d6efd;
+        --footer-bg: #071223;
+        --footer-text: #e8f1f8;
       }
-
-      .object-fit-cover {
+      html,
+      body {
+        height: 100%;
+      }
+      .object-cover {
         object-fit: cover;
       }
-
-      /* Hero logo sizing responsive */
-      .hero-logo {
+      .hero {
+        min-height: 70vh;
+        position: relative;
+        overflow: hidden;
+      }
+      .hero video {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+      }
+      .hero .overlay {
+        position: absolute;
+        inset: 0;
+        background: var(--hero-overlay);
+      }
+      .hero .center {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 3rem 1rem;
+        color: #fff;
+      }
+      .hero .logo {
         max-width: 420px;
         width: 60%;
         height: auto;
       }
-
-      /* Card visuals */
-      .exp-card {
-        min-height: 420px;
-        display: flex;
-        flex-direction: column;
-      }
-      .exp-card .card-img-top {
-        height: 220px;
-      }
-
-      /* Make carousel images fill container gracefully */
-      .card-carousel .carousel-item img {
-        height: 220px;
-        width: 100%;
+      .card-img-top {
+        height: 180px;
         object-fit: cover;
       }
-
-      /* Footer styling */
       footer {
-        background: #041022;
-        color: #e9f1f7;
+        background: var(--footer-bg);
+        color: var(--footer-text);
         padding: 2rem 0;
       }
-
-      /* Slight blur on overlay on small devices to improve readability */
-      @media (max-width: 767.98px) {
-        .position-absolute.bg-dark.bg-opacity-50 {
-          backdrop-filter: blur(2px);
+      footer a {
+        color: var(--footer-text);
+        text-decoration: underline;
+      }
+      @media (min-width: 992px) {
+        .hero {
+          min-height: 85vh;
         }
       }
     </style>
   </head>
   <body>
-    <main>
-      <!-- NAV -->
-      <nav
-        class="navbar navbar-expand-lg navbar-dark bg-transparent position-absolute w-100 z-3"
-        role="navigation"
-        aria-label="Main navigation"
-      >
-        <div class="container-fluid p-2 p-lg-3">
-          <a class="navbar-brand d-flex align-items-center" href="#">
-            <img
-              src="../jurrasic-expenditions/assets/JWE-navbar-Logo.webp"
-              alt="Jurassic Expeditions logo"
-              class="img-fluid dark-version me-2"
-              style="max-height: 48px"
-            />
-            <span class="visually-hidden">Jurassic Expedition Tours</span>
-          </a>
-
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto align-items-lg-center">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#packages">Packages</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#gallery">Gallery</a>
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link"
-                  href="#booking"
-                  data-bs-toggle="modal"
-                  data-bs-target="#bookingModal"
-                  >Booking</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#contact">Contact</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-
-      <!-- HERO -->
-      <div class="position-relative min-vh-100">
-        <video
-          autoplay
-          muted
-          loop
-          playsinline
-          preload="metadata"
-          poster="../jurrasic-expenditions/assets/hero-poster.jpg"
-          class="position-absolute top-0 start-0 w-100 h-100 z-0 object-fit-cover"
-          src="../jurrasic-expenditions/assets/JWE-Open-Gates-Web.webm"
-        ></video>
-
-        <div
-          class="position-absolute top-0 start-0 w-100 h-100"
-          style="background: var(--hero-overlay)"
-        ></div>
-
-        <div
-          class="position-relative z-2 d-flex flex-column justify-content-center align-items-center text-center min-vh-100 px-3"
-        >
+    <header class="py-3">
+      <div class="container d-flex align-items-center justify-content-between">
+        <a href="#" class="d-flex align-items-center text-decoration-none">
           <img
-            src="../jurrasic-expenditions/assets/JWE-Main-Logo.webp"
-            alt="Jurassic Expeditions main logo"
-            class="hero-logo img-fluid mb-3"
+            src="../jurrasic-expenditions/assets/JWE-navbar-Logo.webp"
+            alt="Jurassic"
+            style="height: 48px"
           />
-          <p class="lead text-light mb-4 fw-light">
-            Explore lost worlds — curated, safe, unforgettable expeditions.
-          </p>
-          <div>
-            <a href="#packages" class="btn btn-primary btn-lg me-2"
-              >View Packages</a
-            >
-            <a
-              href="#booking"
-              class="btn btn-outline-light btn-lg"
-              data-bs-toggle="modal"
-              data-bs-target="#bookingModal"
-              >Book Now</a
-            >
-          </div>
-        </div>
+          <span class="visually-hidden">Jurassic Expedition Tours</span>
+        </a>
+        <!-- simplified nav (no JS) -->
+        <nav>
+          <ul class="nav">
+            <li class="nav-item"><a class="nav-link px-2" href="#">Home</a></li>
+            <li class="nav-item">
+              <a class="nav-link px-2" href="#packages">Packages</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-2" href="#gallery">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-2" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </nav>
       </div>
+    </header>
 
-      <!-- PACKAGES / CARDS GRID -->
-      <section id="packages" class="py-5">
-        <div class="container">
-          <div class="d-flex justify-content-between align-items-center mb-4">
-            <h2 class="h3 mb-0">Featured Expeditions</h2>
-            <small class="text-muted">Choose your adventure</small>
-          </div>
-
-          <div class="row g-4">
-            <!-- Card 1 (carousel inside card) -->
-            <div class="col-12 col-md-6 col-lg-4">
-              <div class="card exp-card shadow-sm border-0">
-                <div
-                  id="cardCarousel1"
-                  class="carousel slide card-carousel"
-                  data-bs-ride="carousel"
-                >
-                  <div class="carousel-inner">
-                    <div class="carousel-item active">
-                      <img
-                        src="../jurrasic-expenditions/assets/card-1.jpg"
-                        class="d-block w-100"
-                        alt="Tropical Valley view"
-                        loading="lazy"
-                      />
-                    </div>
-                    <div class="carousel-item">
-                      <img
-                        src="../jurrasic-expenditions/assets/card-2.jpg"
-                        class="d-block w-100"
-                        alt="Tropical at dusk"
-                        loading="lazy"
-                      />
-                    </div>
-                    <div class="carousel-item">
-                      <img
-                        src="../jurrasic-expenditions/assets/card-3.jpg"
-                        class="d-block w-100"
-                        alt="River crossing"
-                        loading="lazy"
-                      />
-                    </div>
-                  </div>
-                  <button
-                    class="carousel-control-prev"
-                    type="button"
-                    data-bs-target="#cardCarousel1"
-                    data-bs-slide="prev"
-                  >
-                    <span
-                      class="carousel-control-prev-icon"
-                      aria-hidden="true"
-                    ></span>
-                    <span class="visually-hidden">Previous</span>
-                  </button>
-                  <button
-                    class="carousel-control-next"
-                    type="button"
-                    data-bs-target="#cardCarousel1"
-                    data-bs-slide="next"
-                  >
-                    <span
-                      class="carousel-control-next-icon"
-                      aria-hidden="true"
-                    ></span>
-                    <span class="visually-hidden">Next</span>
-                  </button>
-                </div>
-
-                <div class="card-body d-flex flex-column">
-                  <h5 class="card-title">Primeval Valley (3 days)</h5>
-                  <p class="card-text text-muted flex-grow-1">
-                    Guided hikes, river safaris and a camp under the stars.
-                    Family-friendly and safety-first.
-                  </p>
-                  <div
-                    class="d-flex justify-content-between align-items-center"
-                  >
-                    <div class="fs-5 fw-semibold">$499</div>
-                    <div>
-                      <button
-                        class="btn btn-outline-secondary me-2"
-                        data-bs-toggle="modal"
-                        data-bs-target="#detailsModal"
-                        data-title="Primeval Valley"
-                        data-text="3-day guided experience with river safari &amp; campfire stories."
-                      >
-                        Details
-                      </button>
-                      <button
-                        class="btn btn-primary"
-                        data-bs-toggle="modal"
-                        data-bs-target="#bookingModal"
-                        data-package="Primeval Valley"
-                      >
-                        Book
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Card 2 -->
-            <div class="col-12 col-md-6 col-lg-4">
-              <div class="card exp-card shadow-sm border-0">
-                <img
-                  src="../jurrasic-expenditions/assets/card-4.jpg"
-                  class="card-img-top"
-                  alt="Coastal expedition"
-                  loading="lazy"
-                />
-                <div class="card-body d-flex flex-column">
-                  <h5 class="card-title">
-                    Coastal Cliffs &amp; Coves (2 days)
-                  </h5>
-                  <p class="card-text text-muted flex-grow-1">
-                    Boat excursions, fossil hunts and cliff-top dining
-                    experiences.
-                  </p>
-                  <div
-                    class="d-flex justify-content-between align-items-center"
-                  >
-                    <div class="fs-5 fw-semibold">$359</div>
-                    <div>
-                      <button
-                        class="btn btn-outline-secondary me-2"
-                        data-bs-toggle="modal"
-                        data-bs-target="#detailsModal"
-                        data-title="Coastal Cliffs &amp; Coves"
-                        data-text="2-day seaside expedition with fossil hunt and boat ride."
-                      >
-                        Details
-                      </button>
-                      <button
-                        class="btn btn-primary"
-                        data-bs-toggle="modal"
-                        data-bs-target="#bookingModal"
-                        data-package="Coastal Cliffs & Coves"
-                      >
-                        Book
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Card 3 -->
-            <div class="col-12 col-md-6 col-lg-4">
-              <div class="card exp-card shadow-sm border-0">
-                <img
-                  src="../jurrasic-expenditions/assets/card-5.jpg"
-                  class="card-img-top"
-                  alt="Night safari"
-                  loading="lazy"
-                />
-                <div class="card-body d-flex flex-column">
-                  <h5 class="card-title">Night Safari Experience (1 night)</h5>
-                  <p class="card-text text-muted flex-grow-1">
-                    Spot nocturnal wildlife, immersive soundscapes, and
-                    expert-led night observatory.
-                  </p>
-                  <div
-                    class="d-flex justify-content-between align-items-center"
-                  >
-                    <div class="fs-5 fw-semibold">$229</div>
-                    <div>
-                      <button
-                        class="btn btn-outline-secondary me-2"
-                        data-bs-toggle="modal"
-                        data-bs-target="#detailsModal"
-                        data-title="Night Safari Experience"
-                        data-text="Overnight guided experience with observatory &amp; nocturnal tracking."
-                      >
-                        Details
-                      </button>
-                      <button
-                        class="btn btn-primary"
-                        data-bs-toggle="modal"
-                        data-bs-target="#bookingModal"
-                        data-package="Night Safari Experience"
-                      >
-                        Book
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Add more cards as needed -->
-          </div>
-        </div>
-      </section>
-
-      <!-- GALLERY -->
-      <section id="gallery" class="py-5 bg-light">
-        <div class="container">
-          <div class="d-flex justify-content-between align-items-center mb-4">
-            <h2 class="h4 mb-0">Gallery</h2>
-            <small class="text-muted">Snapshots from recent expeditions</small>
-          </div>
-
-          <div
-            id="galleryCarousel"
-            class="carousel slide"
-            data-bs-ride="carousel"
+    <!-- HERO -->
+    <section class="hero bg-dark text-white">
+      <video
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="metadata"
+        poster="../jurrasic-expenditions/assets/hero-poster.jpg"
+        class="object-cover"
+      >
+        <source
+          src="../jurrasic-expenditions/assets/JWE-Open-Gates-Web.webm"
+          type="video/webm"
+        />
+        <!-- fallback image shown by poster -->
+      </video>
+      <div class="overlay"></div>
+      <div class="center">
+        <img
+          src="../jurrasic-expenditions/assets/JWE-Main-Logo.webp"
+          class="logo mb-3"
+          alt="Jurassic logo"
+        />
+        <p class="lead mb-3 fw-light">
+          Explore lost worlds — curated, safe, unforgettable expeditions.
+        </p>
+        <div>
+          <a href="#packages" class="btn btn-primary btn-lg me-2"
+            >View Packages</a
           >
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img
-                  src="../jurrasic-expenditions/assets/card-6.jpg"
-                  class="d-block w-100 rounded"
-                  alt="Gallery image 1"
-                  loading="lazy"
-                />
-              </div>
-              <div class="carousel-item">
-                <img
-                  src="../jurrasic-expenditions/assets/card-7.jpg"
-                  class="d-block w-100 rounded"
-                  alt="Gallery image 2"
-                  loading="lazy"
-                />
-              </div>
-              <div class="carousel-item">
-                <img
-                  src="../jurrasic-expenditions/assets/card-8.jpg"
-                  class="d-block w-100 rounded"
-                  alt="Gallery image 3"
-                  loading="lazy"
-                />
-              </div>
-            </div>
-            <button
-              class="carousel-control-prev"
-              type="button"
-              data-bs-target="#galleryCarousel"
-              data-bs-slide="prev"
-            >
-              <span
-                class="carousel-control-prev-icon"
-                aria-hidden="true"
-              ></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button
-              class="carousel-control-next"
-              type="button"
-              data-bs-target="#galleryCarousel"
-              data-bs-slide="next"
-            >
-              <span
-                class="carousel-control-next-icon"
-                aria-hidden="true"
-              ></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-          </div>
-        </div>
-      </section>
-
-      <!-- CONTACT + QUICK BOOK -->
-      <section id="contact" class="py-5">
-        <div class="container">
-          <div class="row g-4">
-            <div class="col-md-6">
-              <h3 class="h5">Contact Us</h3>
-              <p class="text-muted">
-                Questions about an expedition, group bookings, or accessibility?
-                Drop us a note.
-              </p>
-
-              <form id="contactForm" class="needs-validation" novalidate>
-                <div class="mb-3">
-                  <label for="name" class="form-label">Full name</label>
-                  <input type="text" class="form-control" id="name" required />
-                  <div class="invalid-feedback">Please provide your name.</div>
-                </div>
-
-                <div class="mb-3">
-                  <label for="email" class="form-label">Email address</label>
-                  <input
-                    type="email"
-                    class="form-control"
-                    id="email"
-                    required
-                  />
-                  <div class="invalid-feedback">
-                    Please provide a valid email.
-                  </div>
-                </div>
-
-                <div class="mb-3">
-                  <label for="message" class="form-label">Message</label>
-                  <textarea
-                    class="form-control"
-                    id="message"
-                    rows="4"
-                    required
-                  ></textarea>
-                  <div class="invalid-feedback">
-                    Tell us a bit about your query.
-                  </div>
-                </div>
-
-                <button type="submit" class="btn btn-primary">
-                  Send message
-                </button>
-              </form>
-            </div>
-
-            <div class="col-md-6">
-              <h3 class="h5">Quick Booking</h3>
-              <p class="text-muted">
-                Choose a package and request dates — we'll confirm availability.
-              </p>
-
-              <form id="quickBookingForm" class="needs-validation" novalidate>
-                <div class="mb-3">
-                  <label for="packageSelect" class="form-label">Package</label>
-                  <select id="packageSelect" class="form-select" required>
-                    <option selected disabled value="">Choose a package</option>
-                    <option>Primeval Valley</option>
-                    <option>Coastal Cliffs &amp; Coves</option>
-                    <option>Night Safari Experience</option>
-                  </select>
-                  <div class="invalid-feedback">Please select a package.</div>
-                </div>
-
-                <div class="mb-3">
-                  <label for="date" class="form-label">Preferred date</label>
-                  <input type="date" id="date" class="form-control" required />
-                  <div class="invalid-feedback">Please choose a date.</div>
-                </div>
-
-                <div class="mb-3">
-                  <label for="guests" class="form-label">Guests</label>
-                  <input
-                    type="number"
-                    id="guests"
-                    class="form-control"
-                    min="1"
-                    value="2"
-                    required
-                  />
-                  <div class="invalid-feedback">At least 1 guest.</div>
-                </div>
-
-                <button type="submit" class="btn btn-primary">
-                  Request Booking
-                </button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- FOOTER -->
-      <footer class="mt-5">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-5 mb-3">
-              <h5>Jurassic Expedition Tours</h5>
-              <p class="small text-muted">
-                Safe, curated expeditions into the world's most magical
-                landscapes. © <span id="year"></span> Jurassic Expedition Tours
-              </p>
-              <p class="small text-muted">
-                Email:
-                <a
-                  href="mailto:info@jurassicexpeditions.example"
-                  class="link-light"
-                  >info@jurassicexpeditions.example</a
-                >
-              </p>
-            </div>
-
-            <div class="col-md-3 mb-3">
-              <h6>Explore</h6>
-              <ul class="list-unstyled small">
-                <li><a href="#packages" class="link-light">Packages</a></li>
-                <li><a href="#gallery" class="link-light">Gallery</a></li>
-                <li><a href="#contact" class="link-light">Contact</a></li>
-              </ul>
-            </div>
-
-            <div class="col-md-4 mb-3">
-              <h6>Follow Us</h6>
-              <div class="d-flex gap-2">
-                <a
-                  class="btn btn-outline-light btn-sm"
-                  href="#"
-                  aria-label="Facebook"
-                  >Facebook</a
-                >
-                <a
-                  class="btn btn-outline-light btn-sm"
-                  href="#"
-                  aria-label="Instagram"
-                  >Instagram</a
-                >
-                <a
-                  class="btn btn-outline-light btn-sm"
-                  href="#"
-                  aria-label="Twitter"
-                  >Twitter</a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
-
-      <!-- DETAILS MODAL -->
-      <div
-        class="modal fade"
-        id="detailsModal"
-        tabindex="-1"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog modal-dialog-centered modal-lg">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title">Package details</h5>
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div class="modal-body">
-              <p id="detailsBody">Loading details…</p>
-            </div>
-            <div class="modal-footer">
-              <button class="btn btn-secondary" data-bs-dismiss="modal">
-                Close
-              </button>
-              <button
-                class="btn btn-primary"
-                data-bs-target="#bookingModal"
-                data-bs-toggle="modal"
-              >
-                Book this package
-              </button>
-            </div>
-          </div>
+          <a href="#contact" class="btn btn-outline-light btn-lg">Contact Us</a>
         </div>
       </div>
+    </section>
 
-      <!-- BOOKING MODAL -->
-      <div
-        class="modal fade"
-        id="bookingModal"
-        tabindex="-1"
-        aria-labelledby="bookingModalLabel"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <form id="bookingForm" class="needs-validation" novalidate>
-              <div class="modal-header">
-                <h5 class="modal-title" id="bookingModalLabel">
-                  Book your expedition
-                </h5>
-                <button
-                  type="button"
-                  class="btn-close"
-                  data-bs-dismiss="modal"
-                  aria-label="Close"
-                ></button>
-              </div>
-              <div class="modal-body">
-                <div class="mb-3">
-                  <label for="bookPackage" class="form-label">Package</label>
-                  <input
-                    type="text"
-                    id="bookPackage"
-                    class="form-control"
-                    readonly
-                  />
-                </div>
+    <!-- PACKAGES -->
+    <main class="py-5">
+      <div class="container">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+          <h2 class="h4 mb-0">Featured Expeditions</h2>
+          <small class="text-muted">Choose your adventure</small>
+        </div>
 
-                <div class="mb-3">
-                  <label for="bookName" class="form-label">Full name</label>
-                  <input
-                    type="text"
-                    id="bookName"
-                    class="form-control"
-                    required
-                  />
-                  <div class="invalid-feedback">Please enter your name.</div>
-                </div>
-
-                <div class="mb-3">
-                  <label for="bookEmail" class="form-label">Email</label>
-                  <input
-                    type="email"
-                    id="bookEmail"
-                    class="form-control"
-                    required
-                  />
-                  <div class="invalid-feedback">
-                    Please enter a valid email.
-                  </div>
-                </div>
-
-                <div class="mb-3">
-                  <label for="bookDate" class="form-label"
-                    >Preferred date</label
-                  >
-                  <input
-                    type="date"
-                    id="bookDate"
-                    class="form-control"
-                    required
-                  />
-                  <div class="invalid-feedback">
-                    Choose your preferred date.
-                  </div>
-                </div>
-
-                <div class="mb-3">
-                  <label for="bookGuests" class="form-label">Guests</label>
-                  <input
-                    type="number"
-                    id="bookGuests"
-                    class="form-control"
-                    value="2"
-                    min="1"
-                    required
-                  />
-                  <div class="invalid-feedback">
-                    Please specify number of guests.
-                  </div>
-                </div>
-              </div>
-
-              <div class="modal-footer">
-                <button
-                  class="btn btn-secondary"
-                  data-bs-dismiss="modal"
-                  type="button"
+        <div id="packages" class="row g-4">
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm border-0">
+              <img
+                src="../jurrasic-expenditions/assets/card-1.jpg"
+                class="card-img-top"
+                alt=""
+              />
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Primeval Valley (3 days)</h5>
+                <p class="card-text text-muted flex-grow-1">
+                  Guided hikes, river safaris and a camp under the stars.
+                </p>
+                <div
+                  class="d-flex justify-content-between align-items-center mt-3"
                 >
-                  Cancel
-                </button>
-                <button class="btn btn-primary" type="submit">
-                  Request booking
-                </button>
+                  <div class="fs-6 fw-semibold">$499</div>
+                  <a href="#contact" class="btn btn-sm btn-primary">Enquire</a>
+                </div>
               </div>
-            </form>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm border-0">
+              <img
+                src="../jurrasic-expenditions/assets/card-4.jpg"
+                class="card-img-top"
+                alt=""
+              />
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Coastal Cliffs &amp; Coves (2 days)</h5>
+                <p class="card-text text-muted flex-grow-1">
+                  Boat excursions, fossil hunts and cliff-top dining.
+                </p>
+                <div
+                  class="d-flex justify-content-between align-items-center mt-3"
+                >
+                  <div class="fs-6 fw-semibold">$359</div>
+                  <a href="#contact" class="btn btn-sm btn-primary">Enquire</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm border-0">
+              <img
+                src="../jurrasic-expenditions/assets/card-5.jpg"
+                class="card-img-top"
+                alt=""
+              />
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Night Safari Experience (1 night)</h5>
+                <p class="card-text text-muted flex-grow-1">
+                  Spot nocturnal wildlife and enjoy guided observatory sessions.
+                </p>
+                <div
+                  class="d-flex justify-content-between align-items-center mt-3"
+                >
+                  <div class="fs-6 fw-semibold">$229</div>
+                  <a href="#contact" class="btn btn-sm btn-primary">Enquire</a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+
+        <!-- GALLERY -->
+        <section id="gallery" class="mt-5">
+          <h3 class="h5 mb-3">Gallery</h3>
+          <div class="row g-3">
+            <div class="col-6 col-md-4">
+              <img
+                src="../jurrasic-expenditions/assets/card-6.jpg"
+                class="img-fluid rounded"
+                alt=""
+              />
+            </div>
+            <div class="col-6 col-md-4">
+              <img
+                src="../jurrasic-expenditions/assets/card-7.jpg"
+                class="img-fluid rounded"
+                alt=""
+              />
+            </div>
+            <div class="col-6 col-md-4">
+              <img
+                src="../jurrasic-expenditions/assets/card-8.jpg"
+                class="img-fluid rounded"
+                alt=""
+              />
+            </div>
+          </div>
+        </section>
+
+        <!-- CONTACT (plain form, no JS) -->
+        <section id="contact" class="mt-5">
+          <h3 class="h5 mb-3">Contact</h3>
+          <p class="text-muted">
+            For enquiries, please email us or use the form below. (Form is
+            static — no JavaScript.)
+          </p>
+
+          <form class="row g-3">
+            <div class="col-md-6">
+              <label class="form-label" for="name">Full name</label>
+              <input
+                id="name"
+                class="form-control"
+                type="text"
+                placeholder="Your name"
+              />
+            </div>
+            <div class="col-md-6">
+              <label class="form-label" for="email">Email</label>
+              <input
+                id="email"
+                class="form-control"
+                type="email"
+                placeholder="you@example.com"
+              />
+            </div>
+            <div class="col-12">
+              <label class="form-label" for="message">Message</label>
+              <textarea
+                id="message"
+                class="form-control"
+                rows="4"
+                placeholder="Tell us about your enquiry"
+              ></textarea>
+            </div>
+            <div class="col-12">
+              <!-- plain link (no JS) -->
+              <a
+                href="mailto:info@jurassicexpeditions.example"
+                class="btn btn-primary"
+                >Send via email</a
+              >
+            </div>
+          </form>
+        </section>
       </div>
     </main>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
-    <script>
-      // small helpers: year & simple form handling (client-only)
-      document.getElementById("year").textContent = new Date().getFullYear();
-
-      // Prefill booking modal when invoked from buttons
-      var bookingModal = document.getElementById("bookingModal");
-      bookingModal.addEventListener("show.bs.modal", function (event) {
-        var trigger = event.relatedTarget;
-        var packageName = "";
-
-        // if trigger has data-package attribute (from Book buttons)
-        if (trigger && trigger.getAttribute) {
-          packageName =
-            trigger.getAttribute("data-package") ||
-            trigger.getAttribute("data-title") ||
-            "";
-        }
-
-        // If modal opened from "Book this package" in details modal, pick currently shown title
-        var input = document.getElementById("bookPackage");
-        input.value = packageName || "Custom expedition";
-      });
-
-      // Populate details modal content from data attributes
-      var detailsModal = document.getElementById("detailsModal");
-      detailsModal.addEventListener("show.bs.modal", function (event) {
-        var button = event.relatedTarget;
-        var title = button.getAttribute("data-title") || "Package";
-        var text = button.getAttribute("data-text") || "Details unavailable.";
-        var modalTitle = detailsModal.querySelector(".modal-title");
-        var modalBody = document.getElementById("detailsBody");
-        modalTitle.textContent = title;
-        modalBody.innerHTML = "<p>" + text + "</p>";
-      });
-
-      // Bootstrap form validation (reusable for all forms with .needs-validation)
-      (function () {
-        "use strict";
-        var forms = document.querySelectorAll(".needs-validation");
-        Array.prototype.slice.call(forms).forEach(function (form) {
-          form.addEventListener(
-            "submit",
-            function (event) {
-              if (!form.checkValidity()) {
-                event.preventDefault();
-                event.stopPropagation();
-              } else {
-                // For demo: you would send the form via fetch/AJAX here.
-                event.preventDefault();
-                // simple success feedback (replace with real submission)
-                var submitBtn = form.querySelector('button[type="submit"]');
-                if (submitBtn) {
-                  var orig = submitBtn.innerHTML;
-                  submitBtn.disabled = true;
-                  submitBtn.innerHTML = "Submitted ✓";
-                  setTimeout(function () {
-                    submitBtn.disabled = false;
-                    submitBtn.innerHTML = orig;
-                    // Close modal if booking
-                    var modalEl = form.closest(".modal");
-                    if (modalEl) {
-                      var modalInstance = bootstrap.Modal.getInstance(modalEl);
-                      if (modalInstance) modalInstance.hide();
-                    }
-                    form.reset();
-                    form.classList.remove("was-validated");
-                  }, 900);
-                }
-              }
-              form.classList.add("was-validated");
-            },
-            false
-          );
-        });
-      })();
-    </script>
+    <!-- FOOTER -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-5">
+            <h5>Jurassic Expedition Tours</h5>
+            <p class="small mb-1">
+              Safe, curated expeditions into the world's most magical
+              landscapes.
+            </p>
+            <p class="small mb-0">© 2025 Jurassic Expedition Tours</p>
+          </div>
+          <div class="col-md-3">
+            <h6>Explore</h6>
+            <ul class="list-unstyled small">
+              <li><a href="#packages">Packages</a></li>
+              <li><a href="#gallery">Gallery</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h6>Contact</h6>
+            <p class="small mb-0">
+              <a href="mailto:info@jurassicexpeditions.example"
+                >info@jurassicexpeditions.example</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
