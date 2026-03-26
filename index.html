@@ -1,40 +1,154 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
-    <title>Projects</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script
+      src="https://kit.fontawesome.com/aba43e1ef8.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
-  <body style="margin:0; font-family: Arial, sans-serif; background:#091413; color:#B0E4CC;">
-
-    <div style="text-align:center; padding:40px;">
-      <h1 style="margin-bottom:30px;">My Projects</h1>
-
-      <!-- Project 1 -->
-      <div style="margin:20px auto; width:300px; padding:20px; background:#285A48; border-radius:10px;">
-        <h2>Jurassic Expedition</h2>
-        <p style="font-size:14px;">Responsive travel website with modern UI</p>
-        <a 
-          href="web/assignments/week03/jurrasic-expenditions/index.html" 
-          target="_blank"
-          style="display:inline-block; margin-top:10px; padding:10px 15px; background:#408A71; color:white; text-decoration:none; border-radius:5px;"
-        >
-          View Project
-        </a>
+  <body>
+    <main>
+      <div class="portfolio-container">
+        <div class="left-column">
+          <h1>Harsh Boyal's Portfolio</h1>
+          <p>Frontend Developer</p>
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/boyalharsh">
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/Erupter20">
+              <i class="fa-brands fa-github"></i>
+            </a>
+          </div>
+        </div>
+        <div class="right-column">
+          <section>
+            <h2 id="about-me">About Me</h2>
+            <div class="about-me-container">
+              <img src="../assets/profile.jpg" alt="headshot of Harsh" />
+              <p>
+                Frontend developer with strong fundamentals in HTML, CSS,
+                JavaScript, and Bootstrap, along with working knowledge of
+                Python. Experienced in building responsive web applications and
+                interactive UI components. Currently focused on mastering MERN
+                stack development and improving problem-solving skills.
+              </p>
+            </div>
+          </section>
+          <section>
+            <h2>Skills</h2>
+            <ul>
+              <li>Frontend - HTML, CSS, JavaScript, Bootstrap</li>
+              <li>Python Developer</li>
+              <li>Computer Science Fundamentals</li>
+              <li>Python (Basics, OOPS, Pandas)</li>
+              <li>Tech & Filmmaking Enthusiast</li>
+            </ul>
+          </section>
+          <section>
+            <h2 class="h-2">Tools</h2>
+            <ol>
+              <li>Git and GitHub</li>
+              <li>Responsive Design</li>
+              <li>Python Programming</li>
+            </ol>
+          </section>
+          <section>
+            <h2>Education</h2>
+            <div class="education-entry">
+              <div class="card">
+                <h3>B. Tech</h3>
+                <p>Engineering College ,Bikaner - 7.58 CGPA</p>
+              </div>
+              <div class="card">
+                <h3>Senior Secondary School</h3>
+                <p>
+                  Aakash Academy Senior Secondary School, Jhunjhunu - 94.20%
+                </p>
+              </div>
+              <div class="card">
+                <h3>High School</h3>
+                <p>Dundload Public School, Jhunjhunu - 91.80%</p>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h2>Projects</h2>
+            <div class="project-container">
+              <!-- Card 1 -->
+              <div class="project-card">
+                <h3>GTA-Tracker</h3>
+                <p>a business manager for Grand Theft Auto</p>
+                <div class="tech-tags">
+                  <span>Python</span>
+                  <span>Pandas</span>
+                  <span>SQL</span>
+                  <div class="project-links">
+                    <a
+                      href="https://gta-tracker-venk2xunhfykafkp7r6r7f.streamlit.app/"
+                      >Live Demo</a
+                    >
+                    <a
+                      href="https://github.com/Erupter20/python-fundamentals/tree/main/python-basics/Samayak/Projects/gta-tracker"
+                      >View Code</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <!-- Card 2 -->
+              <div class="project-card">
+                <h3>Jurassic Expedition Tours (Website)</h3>
+                <p>
+                  Developed a fully responsive travel website with modern UI
+                  using HTML, CSS, Bootstrap, and JavaScript. Ensured
+                  cross-device compatibility and interactive components.
+                </p>
+                <div class="tech-tags">
+                  <span>BootStrap</span>
+                  <span>CSS</span>
+                  <span>HTML</span>
+                  <div class="project-links">
+                    <a
+                      href="https://erupter20.github.io/GFG_practice/web/assignments/week03/jurrasic-expenditions/index.html"
+                      >Live Demo</a
+                    >
+                    <a
+                      href="https://github.com/Erupter20/GFG_practice/tree/main/web/assignments/week03/jurrasic-expenditions"
+                      >View Code</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <!--Card 3-->
+              <div class="project-card">
+                <h3>Los Pollos Hermanos (Restaurant Website)</h3>
+                <p>
+                  Created a responsive restaurant website with clean UI and
+                  structured layout. Focused on performance optimization and
+                  improved user experience.
+                </p>
+                <div class="tech-tags">
+                  <span>HTML</span>
+                  <span>CSS</span>
+                  <span>JavaScript</span>
+                  <div class="project-links">
+                    <a href="">Live Demo</a>
+                    <a
+                      href="https://github.com/Erupter20/GFG_practice/tree/main/web/assignments/week01/ecommerce-week01"
+                      >View Code</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <footer><small>&copy Harsh Boyal 2025</small></footer>
+        </div>
       </div>
-
-      <!-- Project 2 -->
-      <div style="margin:20px auto; width:300px; padding:20px; background:#285A48; border-radius:10px;">
-        <h2>Ecommerce Website</h2>
-        <p style="font-size:14px;">Basic ecommerce UI layout</p>
-        <a 
-          href="web/assignments/week01/ecommerce-week01/index.html" 
-          target="_blank"
-          style="display:inline-block; margin-top:10px; padding:10px 15px; background:#408A71; color:white; text-decoration:none; border-radius:5px;"
-        >
-          View Project
-        </a>
-      </div>
-
-    </div>
-
+    </main>
   </body>
 </html>
