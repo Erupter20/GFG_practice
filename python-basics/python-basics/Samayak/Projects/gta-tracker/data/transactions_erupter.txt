@@ -1,0 +1,15 @@
+Cash:Finance:Cash:5229000
+
+Kosatka:Utility:Submarine:2200000
+Agency Hawick:Property:Agency:2830000
+Maze Bank West Office:Business:CEO Office:1000000
+Nightclub Downtown Vinewood:Business:Nightclub:1670000
+Fort Zancudo Hangar A2:Property:Hangar:3250000
+Paleto Forest Bunker:Business:Bunker:1165000
+Great Chaparral Clubhouse:Business:MC Clubhouse:200000
+Alamo Sea Cocaine Lockup:Business:MC Cocaine:975000
+Grand Senora Meth Lab:Business:MC Meth:910000
+Counterfeit Cash Factory:Business:MC Cash:845000
+San Chianski Weed Farm:Business:MC Weed:715000
+Grapeseed Document Forgery:Business:MC Documents:650000
+Terrorbyte:Utility:Operations Truck:1375000

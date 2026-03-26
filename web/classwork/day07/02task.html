@@ -1,0 +1,47 @@
+<!-- create a ruthko painting  -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ruthko painting</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .canvas {
+        width: 800px;
+        height: 600px;
+        background-color: black;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .box {
+        width: 750px;
+        height: 100px;
+        margin: 5px;
+
+    }
+    #red{
+        background:red;
+    }
+    #yellow{
+        background: yellow;
+        flex-grow: 2;
+    }
+    #green{
+        background: green;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="canvas">
+      <div class="box" id="red"></div>
+      <div class="box" id="yellow"></div>
+      <div class="box" id="green"></div>
+    </div>
+  </body>
+</html>

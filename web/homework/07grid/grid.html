@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>grid</title>
+  </head>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      color: beige;
+    }
+    .container {
+      width: 800px;
+      height: 500px;
+      background-color: beige;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(4, 1fr);
+      gap: 10px;
+    }
+    .child {
+      display: flex;
+      background-color: red;
+      align-items: center;
+      justify-content: center;
+    }
+    .child-1 {
+      background-color: red;
+      grid-column-start: 1;
+      grid-column-end: 2;
+    }
+    .child-2 {
+      background-color: red;
+      grid-column-start: 2;
+      grid-column-end: 4;
+    }
+    
+  </style>
+  <body>
+    <div class="container">
+      <div class="child">
+        <div class="child child-1">1</div>
+        <div class="child child-2">2</div>
+        <div class="child child-3">3</div>
+        <div class="child child-4">4</div>
+        <div class="child child-5">5</div>
+        <div class="child child-6">6</div>
+        <div class="child child-7">7</div>
+        <div class="child child-8">8</div>
+      </div>
+    </div>
+  </body>
+</html>

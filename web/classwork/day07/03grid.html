@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 3px;
+        color: black;
+        background-color: black;
+      }
+      .container {
+        width: 800px;
+        height: 500px;
+        background-color: beige;
+        padding: 10px;
+        gap: 10px;
+        display: grid;
+        grid-template-areas: 
+        "one one two two"
+        "one one three four"
+        "five five six six"
+        "five five seven eight"
+        ;
+
+      }
+      .child {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: red;
+      }
+      .child-1 {
+        background-color: red;
+        grid-area: one;
+      }
+      .child-2 {
+        background-color: red;
+        grid-area: two;
+      }
+      .child-3 {
+        background-color: red;
+      }
+      .child-4 {
+        background-color: red;
+      }
+      .child-5 {
+        background-color: cadetblue;
+        grid-area: five;
+      }
+      .child-6 {
+        background-color: cadetblue;
+        grid-area: six;
+      }
+      .child-7{
+        background-color:cadetblue;
+      }
+      .child-8{
+        background-color:cadetblue;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="child child-1">1</div>
+      <div class="child child-2">2</div>
+      <div class="child child-3">3</div>
+      <div class="child child-4">4</div>
+      <div class="child child-5">1</div>
+      <div class="child child-6">2</div>
+      <div class="child child-7">3</div>
+      <div class="child child-8">4</div>
+    </div>
+  </body>
+</html>
