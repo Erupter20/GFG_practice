@@ -4,3 +4,10 @@ node_modules/venv/
 .venv/
 __pycache__/
 .myenv/
+
+.vscode/
+assets/
+python-basics/
+your_database.db
+index.html
+style.css
