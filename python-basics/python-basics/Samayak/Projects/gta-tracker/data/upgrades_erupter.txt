@@ -1,5 +1,34 @@
 Kosatka:Sparrow:1815000
+
 Agency Hawick:Armory:720000
 Agency Hawick:Vehicle Workshop:800000
+
 Nightclub Downtown Vinewood:Equipment Upgrade:1410000
+Nightclub Downtown Vinewood:Staff Upgrade:475000
 Nightclub Downtown Vinewood:Security Upgrade:695000
+
+Paleto Forest Bunker:Equipment Upgrade:1155000
+Paleto Forest Bunker:Staff Upgrade:598500
+Paleto Forest Bunker:Security Upgrade:351000
+
+Alamo Sea Cocaine Lockup:Equipment Upgrade:935000
+Alamo Sea Cocaine Lockup:Staff Upgrade:273000
+Alamo Sea Cocaine Lockup:Security Upgrade:570000
+
+Grand Senora Meth Lab:Equipment Upgrade:1100000
+Grand Senora Meth Lab:Staff Upgrade:331500
+Grand Senora Meth Lab:Security Upgrade:513000
+
+Counterfeit Cash Factory:Equipment Upgrade:880000
+Counterfeit Cash Factory:Staff Upgrade:300000
+Counterfeit Cash Factory:Security Upgrade:456000
+
+San Chianski Weed Farm:Equipment Upgrade:990000
+San Chianski Weed Farm:Staff Upgrade:273000
+San Chianski Weed Farm:Security Upgrade:456000
+
+Grapeseed Document Forgery:Equipment Upgrade:800000
+Grapeseed Document Forgery:Staff Upgrade:195000
+Grapeseed Document Forgery:Security Upgrade:390000
+
+Acid Lab:Equipment Upgrade:250000
