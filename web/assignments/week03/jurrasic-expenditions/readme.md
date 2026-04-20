@@ -30,7 +30,6 @@ A modern, responsive travel website for booking immersive expedition tours. Buil
 project/
 │── index.html        # Main website
 │── assets/           # Images, videos
-│── css/              # Custom styles (if separated)
 ```
 
 ---
