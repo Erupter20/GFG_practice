@@ -541,20 +541,31 @@ const taskManager = {
     console.log(task + " task added");
   },
   completeTask(task) {
-    this.tasks.push({
-      name: task,
-      completed: true,
-    });
-    console.log(task + " task completed");
+    for (let i = 0; i < this.tasks.length; i++) {
+      if (this.tasks[i].name === task) {
+        this.task[i].completed = true;
+        console.log(task + "completed");
+      }
+    }
   },
   showTasks(task) {
-    for (i = 0; i < task.length; i++) {
-      console.log(task);
+    console.log(task);
+  },
+  removeTask(task) {
+    for (let i = 0; i < this.tasks.length; i++) {
+      if (this.tasks[i].name === task) {
+        this.tasks.splice(i, 1);
+        console.log(task + "removed");
+        break;
+      }
     }
+  },
+  showTasks(task) {
+    console.log(this.tasks);
   },
 };
 
 taskManager.addTask("JS");
-
+taskManager.addTask("OOPS");
 taskManager.completeTask("JS");
 taskManager.showTasks();
