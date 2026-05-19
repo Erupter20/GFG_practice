@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Box Model</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        width: 500px;
+        height: 500px;
+        padding: 20px;
+        background-color: aquamarine;
+        border: 5px solid green;
+        margin: 10px;
+      }
+      header,
+      footer {
+        background-color: black;
+        color: gold;
+        text-align: center;
+        border: 2 px solid red;
+        padding: 20px;
+        font-size: 20px;
+        font-weight: bold;
+        border-radius: 10px;
+      }
+      section {
+        display: grid;
+        grid-template-columns: 3fr 6fr 3fr;
+        margin-top: 20px;
+        height: 400px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>Amazon Shopping</header>
+    <section>
+      <nav>
+        <menu>
+          <div>Home</div>
+          <div>About</div>
+          <div>Services</div>
+          <div>Gallery</div>
+          <div>Contact</div>
+        </menu>
+      </nav>
+      <main>
+        Shopping main content
+        <article>50% off on electronics</article>
+        <figure>
+          Image here
+          <figcaption>Fig: Mobile</figcaption>
+        </figure>
+        <dialog>Help ?</dialog>
+      </main>
+      <aside>ads here...</aside>
+    </section>
+    <footer>ducat &copy 2026</footer>
+    <html></html>
+  </body>
+</html>

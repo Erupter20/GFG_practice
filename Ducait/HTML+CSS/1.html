@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <style>
+      * {
+        background-color: black;
+        color: yellow;
+      }
+      nav div {
+        border: 2px solid red;
+        background-color: tomato;
+        padding: 5px;
+        margin-bottom: 20px;
+        width: 150px;
+      }
+      nav {
+        display: flex;
+      }
+      @media screen and (orientation: portrait) {
+        nav {
+            display: block;
+        }
+        nav div {
+            margin: bottom 30px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div>Home</div>
+      <div>About</div>
+      <div>Contact</div>
+    </nav>
+  </body>
+</html>
