@@ -570,7 +570,6 @@
 // taskManager.completeTask("JS");
 // taskManager.showTasks();
 
-
 // TODO : Create an employee array
 // Tasks:
 // Increase salary by 10% - print updated salary
@@ -583,43 +582,105 @@
 //   {id:3, name: "Alex", salary : 60000}
 // ]
 
+// // Employee array
+// const employees = [
+//   { id: 1, name: "Alex", salary: 50000 },
+//   { id: 2, name: "John", salary: 70000 },
+//   { id: 3, name: "Sam", salary: 60000 }
+// ];
 
+// // 1. Increase salary by 10% and print updated salaries
+// const employees = [
+//   { id: 1, name: "Alex", salary: 50000 },
+//   { id: 2, name: "John", salary: 70000 },
+//   { id: 3, name: "Sam", salary: 60000 }
+// ];
 
-// Employee array
-const employees = [
-  { id: 1, name: "Alex", salary: 50000 },
-  { id: 2, name: "John", salary: 70000 },
-  { id: 3, name: "Sam", salary: 60000 }
+// // 1. Increase salary by 10%
+// console.log("Updated salaries:");
+
+// for (let i = 0; i < employees.length; i++) {
+//   employees[i].salary = employees[i].salary + (employees[i].salary * 0.10);
+
+//   console.log(
+//     employees[i].name + ": " + employees[i].salary
+//   );
+// }
+
+// // 2. Find employee with highest salary
+// let highest = employees[0];
+
+// for (let i = 1; i < employees.length; i++) {
+//   if (employees[i].salary > highest.salary) {
+//     highest = employees[i];
+//   }
+// }
+
+// console.log("Highest salary employee:");
+// console.log(highest);
+
+// // 3. Remove employee by ID
+// let removeId = 2;
+
+// for (let i = 0; i < employees.length; i++) {
+//   if (employees[i].id === removeId) {
+//     employees.splice(i, 1);
+//   }
+// }
+
+// console.log("After removing employee:");
+// console.log(employees);
+
+// Create an array of users,
+// tasks: find active users
+// count inactive users
+// search user by email
+
+const users = [
+  { name: "Alex", age: 22, active: true, mail: "alex@yahoo.com" },
+  { name: "Bruno", age: 25, active: false, mail: "bruno12@outlook.com" },
+  { name: "Charlie", age: 23, active: true, mail: "char@gmail.com" },
 ];
 
-// 1. Increase salary by 10% and print updated salaries
-const updatedEmployees = employees.map(employee => ({
-  ...employee,
-  salary: employee.salary * 1.10
-}));
+// 1. Find active users
 
-console.log("Updated salaries:");
-updatedEmployees.forEach(emp => {
-  console.log(`${emp.name}: ${emp.salary}`);
-});
+// console.log("Active users:");
+// for (let i = 0; i < users.length; i++) {
+//   if (users[i].active === true) {
+//     console.log(users[i]);
+//   }
+// }
+
+// 2. Count inactive users
+// let inactiveCount = 0;
+// for (let i = 0; i < users.length; i++) {
+//   if (users[i].active === false) {
+//     inactiveCount++;
+//   }
+// }
+// console.log("Inactive users:", inactiveCount);
+
+// 3. Search user by email
+
+// let searchEmail = "char@gmail.com";
+// for (let i = 0; i < users.length; i++) {
+//   if (users[i].email === searchEmail) {
+//     console.log("User found:");
+//     console.log(users[i]);
+//   }
+// }
 
 
-// 2. Find employee with highest salary
-const highestSalaryEmployee = employees.reduce(
-  (highest, current) =>
-    current.salary > highest.salary ? current : highest
-);
+// Create a function that returns another function
+// requirement:
+// private counter
+// increment
+// decrement
+// reset
 
-console.log("Highest salary employee:");
-console.log(highestSalaryEmployee);
-
-
-// 3. Remove employee by ID
-const removeId = 2;
-
-const filteredEmployees = employees.filter(
-  employee => employee.id !== removeId
-);
-
-console.log("After removing employee:");
-console.log(filteredEmployees);
+const counter {
+    value : 0,
+    increment() {this.value++;},
+    decrement() {this.value--;},
+    reset() {this.value == 0;}
+};
