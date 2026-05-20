@@ -506,10 +506,10 @@
 // properties: name, salary
 // methods: increseSalary(amount), decreaseSalary(amount)
 
-let employee = {
-  name: "Alex",
-  age: 22,
-};
+// let employee = {
+//   name: "Alex",
+//   age: 22,
+// };
 
 // Task:
 // Task Manager
@@ -530,42 +530,55 @@ let employee = {
 
 // taskManager.addTask("")
 
-var task = [];
-const taskManager = {
-  tasks: [],
-  addTask(task) {
-    this.tasks.push({
-      name: task,
-      completed: false,
-    });
-    console.log(task + " task added");
-  },
-  completeTask(task) {
-    for (let i = 0; i < this.tasks.length; i++) {
-      if (this.tasks[i].name === task) {
-        this.task[i].completed = true;
-        console.log(task + "completed");
-      }
-    }
-  },
-  showTasks(task) {
-    console.log(task);
-  },
-  removeTask(task) {
-    for (let i = 0; i < this.tasks.length; i++) {
-      if (this.tasks[i].name === task) {
-        this.tasks.splice(i, 1);
-        console.log(task + "removed");
-        break;
-      }
-    }
-  },
-  showTasks(task) {
-    console.log(this.tasks);
-  },
-};
+// var task = [];
+// const taskManager = {
+//   tasks: [],
+//   addTask(task) {
+//     this.tasks.push({
+//       name: task,
+//       completed: false,
+//     });
+//     console.log(task + " task added");
+//   },
+//   completeTask(task) {
+//     for (let i = 0; i < this.tasks.length; i++) {
+//       if (this.tasks[i].name === task) {
+//         this.tasks[i].completed = true;
+//         console.log(task + "completed");
+//       }
+//     }
+//   },
+//   showTasks(task) {
+//     console.log(task);
+//   },
+//   removeTask(task) {
+//     for (let i = 0; i < this.tasks.length; i++) {
+//       if (this.tasks[i].name === task) {
+//         this.tasks[i].splice(i, 1);
+//         console.log(task + "removed");
+//         break;
+//       }
+//     }
+//   },
+//   showTasks(task) {
+//     console.log(this.tasks);
+//   },
+// };
 
-taskManager.addTask("JS");
-taskManager.addTask("OOPS");
-taskManager.completeTask("JS");
-taskManager.showTasks();
+// taskManager.addTask("JS");
+// taskManager.addTask("OOPS");
+// taskManager.completeTask("JS");
+// taskManager.showTasks();
+
+
+// TODO : Create an employee array
+// Tasks:
+// Increase salary by 10% - print updated salary
+// Find employee with highest salary
+// Remove employee by ID
+
+// const employees = [
+//   {id:1, name: "Alex", salary : 50000}
+//   {id:2, name: "Alex", salary : 70000}
+//   {id:3, name: "Alex", salary : 60000}
+// ]
