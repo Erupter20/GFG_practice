@@ -582,3 +582,44 @@
 //   {id:2, name: "Alex", salary : 70000}
 //   {id:3, name: "Alex", salary : 60000}
 // ]
+
+
+
+// Employee array
+const employees = [
+  { id: 1, name: "Alex", salary: 50000 },
+  { id: 2, name: "John", salary: 70000 },
+  { id: 3, name: "Sam", salary: 60000 }
+];
+
+// 1. Increase salary by 10% and print updated salaries
+const updatedEmployees = employees.map(employee => ({
+  ...employee,
+  salary: employee.salary * 1.10
+}));
+
+console.log("Updated salaries:");
+updatedEmployees.forEach(emp => {
+  console.log(`${emp.name}: ${emp.salary}`);
+});
+
+
+// 2. Find employee with highest salary
+const highestSalaryEmployee = employees.reduce(
+  (highest, current) =>
+    current.salary > highest.salary ? current : highest
+);
+
+console.log("Highest salary employee:");
+console.log(highestSalaryEmployee);
+
+
+// 3. Remove employee by ID
+const removeId = 2;
+
+const filteredEmployees = employees.filter(
+  employee => employee.id !== removeId
+);
+
+console.log("After removing employee:");
+console.log(filteredEmployees);
